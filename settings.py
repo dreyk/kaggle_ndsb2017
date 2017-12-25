@@ -8,8 +8,8 @@ MEAN_PIXEL_VALUE_NODULE = 41
 LUNA_SUBSET_START_INDEX = 0
 SEGMENTER_IMG_SIZE = 320
 
-BASE_DIR_SSD = os.environ['TRAINING_DIR']
-BASE_DIR = os.environ['TRAINING_DIR']
+BASE_DIR_SSD = os.environ['TRAINING_DIR']+"/"
+BASE_DIR = os.environ['TRAINING_DIR']+"/"
 EXTRA_DATA_DIR = os.environ['BOWL_DIR'] + "/resources/"
 NDSB3_RAW_SRC_DIR = os.environ['BOWL_DIR'] + "/stage1/"
 LUNA16_RAW_SRC_DIR = os.environ['LUNA_DIR']
