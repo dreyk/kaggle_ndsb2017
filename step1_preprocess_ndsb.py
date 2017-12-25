@@ -10,7 +10,7 @@ from multiprocessing import Pool
 
 
 def load_patient(src_dir):
-    slices = [dicom.read_file(src_dir + '/' + s) for s in os.listdir(src_dir)]
+    slices = [dicom.read_file(src_dir + '/' + s, force=True) for s in os.listdir(src_dir)]
     slices.sort(key=lambda x: int(x.InstanceNumber))
     try:
         slice_thickness = numpy.abs(slices[0].ImagePositionPatient[2] - slices[1].ImagePositionPatient[2])
