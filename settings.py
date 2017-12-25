@@ -12,7 +12,7 @@ BASE_DIR_SSD = os.environ['TRAINING_DIR']+"/"
 BASE_DIR = os.environ['TRAINING_DIR']+"/"
 EXTRA_DATA_DIR = os.environ['BOWL_DIR'] + "/resources/"
 NDSB3_RAW_SRC_DIR = os.environ['BOWL_DIR'] + "/stage1/"
-LUNA16_RAW_SRC_DIR = os.environ['LUNA_DIR']
+LUNA16_RAW_SRC_DIR = os.environ['LUNA_DIR'] + "/"
 
 NDSB3_EXTRACTED_IMAGE_DIR = BASE_DIR_SSD + "ndsb3_extracted_images/"
 LUNA16_EXTRACTED_IMAGE_DIR = BASE_DIR_SSD + "luna16_extracted_images/"
