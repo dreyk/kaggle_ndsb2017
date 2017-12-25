@@ -1,6 +1,5 @@
 import os
-COMPUTER_NAME = os.environ['COMPUTERNAME']
-print("Computer: ", COMPUTER_NAME)
+COMPUTER_NAME = "kuberlab"
 
 WORKER_POOL_SIZE = 8
 
