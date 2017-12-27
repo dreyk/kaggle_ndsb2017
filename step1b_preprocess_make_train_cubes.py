@@ -116,7 +116,7 @@ def make_annotation_images_lidc():
 
 
 def make_pos_annotation_images_manual():
-    src_dir = "resources/luna16_manual_labels/"
+    src_dir = settings.EXTRA_DATA_DIR+"luna16_manual_labels/"
 
     dst_dir = settings.BASE_DIR_SSD + "generated_traindata/luna16_train_cubes_manual/"
     if not os.path.exists(dst_dir):
@@ -175,7 +175,7 @@ def make_candidate_auto_images(candidate_types=[]):
 
     for candidate_type in candidate_types:
         if candidate_type == "falsepos":
-            src_dir = "resources/luna16_falsepos_labels/"
+            src_dir = settings.EXTRA_DATA_DIR+"luna16_falsepos_labels/"
         else:
             src_dir = settings.LUNA16_EXTRACTED_IMAGE_DIR + "_labels/"
 
@@ -273,7 +273,7 @@ if __name__ == "__main__":
     #     make_pos_annotation_images()  # not used anymore
     if True:
         make_candidate_auto_images(["falsepos", "luna", "edge"])
-    if True:
+    if False:
         make_pos_annotation_images_manual_ndsb3()  # for second model
 
 
