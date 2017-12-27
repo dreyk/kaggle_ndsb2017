@@ -306,7 +306,7 @@ def data_generator(batch_size, record_list, train_set):
                 batch_idx = 0
 
 
-def get_net(input_shape=(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE, 1), load_weight_path=None, features=False, mal=False) -> Model:
+def get_net(input_shape=(CUBE_SIZE, CUBE_SIZE, CUBE_SIZE, 1), load_weight_path=None, features=False, mal=False):
     inputs = Input(shape=input_shape, name="input_1")
     x = inputs
     x = AveragePooling3D(pool_size=(2, 1, 1), strides=(2, 1, 1), border_mode="same")(x)
