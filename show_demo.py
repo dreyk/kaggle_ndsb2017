@@ -208,7 +208,7 @@ def slice_images(patient,p):
         zdata.append(data)
     def slice_image(z_index):
         j = 0
-        fig = plt.figure(figsize=(50, 50))
+        fig = plt.figure(figsize=(25, 25))
         a=fig.add_subplot(111)
         print(zdata[z_index][['coord_x','coord_y','coord_z','diameter','nodule_chance']])
         for index, row in zdata[z_index].iterrows():
