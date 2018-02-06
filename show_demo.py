@@ -221,13 +221,15 @@ def slice_images(patient,p):
             a.add_patch(patches.Circle((x,y),row["diameter_mm"],fill=False,edgecolor="red"))
         plt.axis('off')
         plt.show()
-    interact(slice_image, z_index=IntSlider(min=0,max=len(zdata)-1,step=1,continuous_update=False))
+    usemax = (len(zdata)-1) if len(zdata)>1 else 0
+    interact(slice_image, z_index=IntSlider(min=0,max=usemax,step=1,continuous_update=False))
 def browse_images():
     def view_image(patient):
         p = helpers.load_patient_images(patient_ids[patient], src_dir, "*_i.png")
         #plt.imshow(p[0], cmap=plt.cm.gray_r, interpolation='nearest')
         #plt.show()
         slice_images(patient,p)
-    interact(view_image, patient=IntSlider(min=0,max=len(patient_ids)-1,step=1,continuous_update=False))
+    usemax = (len(patient_ids)-1) if len(patient_ids)>1 else 0
+    interact(view_image, patient=IntSlider(min=0,max=usemax,step=1,continuous_update=False))
 
 
