@@ -30,7 +30,8 @@ P_TH = 0.6
 PREDICT_STEP = 12
 USE_DROPOUT = False
 
-LUNA16_EXTRACTED_IMAGE_DIR = os.environ['DATA_DIR']+'/data/'
+#LUNA16_EXTRACTED_IMAGE_DIR = os.environ['DATA_DIR']+'/data/'
+LUNA16_EXTRACTED_IMAGE_DIR = os.environ['DATA_DIR']+'/cniit-extracted/'
 
 def prepare_image_for_net3D(img):
     img = img.astype(numpy.float32)
@@ -190,7 +191,7 @@ def predict_cubes(patient_ids,z0,model_path,magnification=1, flip=False, holdout
         return df
 
 patient_ids = []
-test_images=os.environ['DATA_DIR']+'/data/'
+test_images=os.environ['DATA_DIR']+'/cniit-extracted/'
 src_dir = test_images
 for file_name in os.listdir(test_images):
     if "labels" in file_name:
