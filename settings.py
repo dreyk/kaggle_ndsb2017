@@ -13,12 +13,12 @@ BASE_DIR = os.environ['TRAINING_DIR']+"/"
 #EXTRA_DATA_DIR = os.environ['BOWL_DIR'] + "/resources/"
 EXTRA_DATA_DIR = "/bowl/resources/"
 #NDSB3_RAW_SRC_DIR = os.environ['BOWL_DIR'] + "/stage1/"
-NDSB3_RAW_SRC_DIR = '/notebooks/data/cniit'
+NDSB3_RAW_SRC_DIR = '/notebooks/data/cniit/'
 #LUNA16_RAW_SRC_DIR = os.environ['LUNA_DIR'] + "/"
 LUNA16_RAW_SRC_DIR = "/luna/"
 
 #NDSB3_EXTRACTED_IMAGE_DIR = BASE_DIR_SSD + "ndsb3_extracted_images/"
-NDSB3_EXTRACTED_IMAGE_DIR = '/notebooks/data/cniit-extracted'
+NDSB3_EXTRACTED_IMAGE_DIR = '/notebooks/data/cniit-extracted/'
 LUNA16_EXTRACTED_IMAGE_DIR = BASE_DIR_SSD + "luna16_extracted_images/"
 NDSB3_NODULE_DETECTION_DIR = BASE_DIR_SSD + "ndsb3_nodule_predictions/"
 
