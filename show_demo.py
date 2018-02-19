@@ -193,12 +193,15 @@ def predict_cubes(patient_ids,z0,model_path,magnification=1, flip=False, holdout
 patient_ids = []
 test_images=os.environ['DATA_DIR']+'/cniit-extracted/'
 src_dir = test_images
+k = 0
 for file_name in os.listdir(test_images):
     if "labels" in file_name:
         continue
     if not os.path.isdir(test_images + file_name):
         continue
     patient_ids.append(file_name)
+    print('%s - %d' % (file_name,k))
+    k = k + 1
 
 import matplotlib.patches as patches
 def slice_images(patient,p):
@@ -211,6 +214,7 @@ def slice_images(patient,p):
         j = 0
         fig = plt.figure()
         a=fig.add_subplot(111)
+        print(patient_ids[patient])
         print(zdata[z_index][['coord_x','coord_y','coord_z','diameter','nodule_chance']])
         for index, row in zdata[z_index].iterrows():
             z = int(row["az"])
